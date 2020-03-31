@@ -1,0 +1,115 @@
+@font-face {
+	font-family: 'svgicons';
+	src: url('../fonts/svgicons.woff2') format('woff2'),
+		url('../fonts/svgicons.woff') format('woff'),
+		url('../fonts/svgicons.ttf') format('truetype');
+		font-display: swap;
+}
+
+@mixin font-styles {
+	font-family: 'svgicons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+	display: block;
+	line-height: 1;
+}
+
+%font {
+	@include font-styles;
+}
+
+@function font-char($filename) {
+	$char: "";
+
+	@if $filename == arrow-right {
+		$char: '\E001';
+	}
+	@if $filename == chevron-arrow-down {
+		$char: '\E002';
+	}
+	@if $filename == envelope {
+		$char: '\E003';
+	}
+	@if $filename == external-link {
+		$char: '\E004';
+	}
+	@if $filename == instagram-logo {
+		$char: '\E005';
+	}
+	@if $filename == live-streaming {
+		$char: '\E006';
+	}
+	@if $filename == play-button-arrowhead {
+		$char: '\E007';
+	}
+	@if $filename == right-arrow {
+		$char: '\E008';
+	}
+	@if $filename == rounded-corner-white-1 {
+		$char: '\E009';
+	}
+	@if $filename == rounded-corner-white {
+		$char: '\E00A';
+	}
+	@if $filename == time {
+		$char: '\E00B';
+	}
+
+	@return $char;
+}
+
+@mixin font($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %font;
+		} @else {
+			@include font-styles;
+		}
+		content: font-char($filename);
+	}
+}
+
+[class*='font-ico'] {
+	display: inline-block;
+}
+
+.font-arrow-right {
+	@include font(arrow-right);
+}
+.font-chevron-arrow-down {
+	@include font(chevron-arrow-down);
+}
+.font-envelope {
+	@include font(envelope);
+}
+.font-external-link {
+	@include font(external-link);
+}
+.font-instagram-logo {
+	@include font(instagram-logo);
+}
+.font-live-streaming {
+	@include font(live-streaming);
+}
+.font-play-button-arrowhead {
+	@include font(play-button-arrowhead);
+}
+.font-right-arrow {
+	@include font(right-arrow);
+}
+.font-rounded-corner-white-1 {
+	@include font(rounded-corner-white-1);
+}
+.font-rounded-corner-white {
+	@include font(rounded-corner-white);
+}
+.font-time {
+	@include font(time);
+}
+

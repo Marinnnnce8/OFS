@@ -1,0 +1,173 @@
+//----------  button
+//------------------------------------------------------------------------------
+a,
+button {
+	appearance: none;
+	outline: none;
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+}
+
+.uk-button {
+	background-color: transparent;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: $extra-bold;
+	border-radius: 9px;
+	position: relative;
+	overflow: hidden;
+	padding: 6px 50px 9px 30px;
+	transition: 0.4s ease-out;
+	text-transform: initial;
+	min-width: 230px;
+	text-align: left;
+	color: $white;
+
+	>span,
+	&::before,
+	&::after {
+		position: absolute;
+		transition: 0.5s ease-in-out;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+	}
+
+	>span {
+		top: 50%;
+		transform: translateY(-50%);
+		right: 30px;
+		&::before {
+			content: font-char($arrow-right);
+			font-family: 'svgicons';
+			color: $white;
+			font-size: inherit;
+		}
+	}
+
+	&::after {
+		@include absolute(0, 0, 0, 0);
+		z-index: -2;
+	}
+
+	&::before {
+		@include absolute(0, -50px, 0, 0);
+		transform: translateX(-100%);
+		z-index: -1;
+	}
+
+	&.uk-button-small {
+		padding: 6px 35px 6px 25px;
+		font-size: 14px;
+		min-width: 170px;
+		>span {
+			right: 20px;
+		}
+	}
+	&.uk-button-large {
+		padding: 6px 50px 9px 40px;
+		font-size: 20px;
+		min-width: 240px;
+		>span {
+			right: 25px;
+		}
+	}
+
+	@include hover {
+		background-color: transparent;
+		color: $white;
+
+		&::before {
+			transform: translateX(0);
+		}
+	}
+}
+
+.uk-button-primary {
+	&::after {
+		background-color: $blue;
+	}
+
+	&::before {
+		border-right: 50px solid transparent;
+		border-bottom: 80px solid $blue-dark;
+	}
+}
+
+.uk-button-default {
+	transition: .5s ease-in-out;
+	border: 2px solid $blue;
+	color: $blue;
+
+	&::before {
+		border-right: 50px solid transparent;
+		border-bottom: 80px solid $blue-dark;
+	}
+
+	>span::before {
+		color: $blue;
+		transition: .5s ease-in-out;
+	}
+
+	@include hover {
+		color: $white;
+		border-color: $blue-dark;
+		>span::before {
+			color: $white;
+		}
+	}
+}
+
+.uk-button-secondary {
+	&::after {
+		background-color: $green;
+	}
+
+	&::before {
+		border-right: 50px solid transparent;
+		border-bottom: 80px solid $green-dark;
+	}
+}
+
+.uk-button-text {
+	padding: 0 30px 0 0;
+	color: $blue;
+	transition: $nbSec ease-in-out;
+	min-width: auto;
+	&::after {
+		display: none;
+	}
+	&::before {
+		content: font-char($arrow-right);
+		font-family: 'svgicons';
+		color: inherit;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		left: auto;
+		bottom: auto;
+		transition: $nbSec ease-in-out;
+		border: 0;
+	}
+	&.uk-text-large {
+		font-size: 20px;
+		padding: 0 40px 0 0;
+	}
+	@include hover {
+		color: $blue-dark;
+		&::before {
+			transform: translateY(-50%);
+			color: inherit;
+		}
+	}
+}
