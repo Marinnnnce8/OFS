@@ -30,35 +30,56 @@
 	@if $filename == arrow-right {
 		$char: '\E001';
 	}
-	@if $filename == chevron-arrow-down {
+	@if $filename == calendar {
 		$char: '\E002';
 	}
-	@if $filename == envelope {
+	@if $filename == caret-right {
 		$char: '\E003';
 	}
-	@if $filename == external-link {
+	@if $filename == chevron-arrow-down {
 		$char: '\E004';
 	}
-	@if $filename == instagram-logo {
+	@if $filename == chevron-left {
 		$char: '\E005';
 	}
-	@if $filename == live-streaming {
+	@if $filename == chevron-right {
 		$char: '\E006';
 	}
-	@if $filename == play-button-arrowhead {
+	@if $filename == envelope {
 		$char: '\E007';
 	}
-	@if $filename == right-arrow {
+	@if $filename == external-link {
 		$char: '\E008';
 	}
-	@if $filename == rounded-corner-white-1 {
+	@if $filename == instagram-logo {
 		$char: '\E009';
 	}
-	@if $filename == rounded-corner-white {
+	@if $filename == live-streaming {
 		$char: '\E00A';
 	}
-	@if $filename == time {
+	@if $filename == minus {
 		$char: '\E00B';
+	}
+	@if $filename == play-button-arrowhead {
+		$char: '\E00C';
+	}
+	@if $filename == plus {
+		$char: '\E00D';
+	}
+	@if $filename == quote {
+		$char: '\E00E';
+	}
+	@if $filename == right-arrow {
+		$char: '\E00F';
+	}
+	@if $filename == rounded-corner-white-1 {
+		$char: '\E010';
+	}
+	@if $filename == rounded-corner-white {
+		$char: '\E011';
+	}
+	@if $filename == time {
+		$char: '\E012';
 	}
 
 	@return $char;
@@ -82,8 +103,20 @@
 .font-arrow-right {
 	@include font(arrow-right);
 }
+.font-calendar {
+	@include font(calendar);
+}
+.font-caret-right {
+	@include font(caret-right);
+}
 .font-chevron-arrow-down {
 	@include font(chevron-arrow-down);
+}
+.font-chevron-left {
+	@include font(chevron-left);
+}
+.font-chevron-right {
+	@include font(chevron-right);
 }
 .font-envelope {
 	@include font(envelope);
@@ -97,8 +130,17 @@
 .font-live-streaming {
 	@include font(live-streaming);
 }
+.font-minus {
+	@include font(minus);
+}
 .font-play-button-arrowhead {
 	@include font(play-button-arrowhead);
+}
+.font-plus {
+	@include font(plus);
+}
+.font-quote {
+	@include font(quote);
 }
 .font-right-arrow {
 	@include font(right-arrow);

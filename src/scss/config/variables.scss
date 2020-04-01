@@ -7,11 +7,24 @@ $italic: italic;
 
 // Colors
 $white: #fff;
+$white-shade: #f5f8fa;
 $black: #000;
 $blue: #2e469c;
+$blue-light: #5061a8;
+$blue-lightest: #edf7ff;
 $blue-dark: #223475;
+$blue-pastel: #cdd4e7;
+$blue-facebook: #2e469c;
+$blue-twitter: #26a2d6;
 $green: #198932;
 $green-dark: #086f1f;
+$green-success: #003c18;
+$green-pastel: #cbe9d7;
+$gray-linkedin: #4c567a;
+$orange-pastel: #f4e0c8;
+$orange-warning: #693900;
+$red-pastel: #f4cccf;
+$red-danger: #660008;
 
 $site-colors: (
 	'black': $black,
@@ -85,7 +98,7 @@ $nbGutterXsmall: $nbGutterSmall / 2;
 
 // Colour
 $nbWhite: #fff;
-$nbBlack: #241d1e;
+$nbBlack: #1a171b;
 $nbRed: #e11e2f;
 $nbGrey: lighten($nbBlack, $nbCent);
 $nbLightGrey: lighten($nbGrey, $nbCent);
@@ -103,3 +116,8 @@ $nbSpeedLong: $nbSpeed * 2;
 $themeVar: 0; // Example, not used
 
 $arrow-right: 'arrow-right';
+$chevron-right: 'chevron-right';
+$chevron-left: 'chevron-left';
+$caret-right: 'caret-right';
+$plus: 'plus';
+$minus: 'minus';

@@ -8,50 +8,138 @@ h4,
 h5,
 h6 {
 	font-family: $font-default;
-	font-weight: normal;
 	line-height: 1.35em;
+	font-weight: $extra-bold;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $blue;
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 54px;
+	text-transform: uppercase;
+	color: $white;
+	margin-bottom: 0;
 }
 
 h2 {
-	font-size: 36px;
+	font-size: 34px;
 }
 
 h3 {
-	font-size: 30px;
+	font-size: 26px;
 }
 
 h4 {
-	font-size: 24px;
-}
-
-h5 {
 	font-size: 20px;
 }
 
-h6 {
-	font-size: 16px;
+h5 {
+	font-size: 18px;
 }
 
+h6 {
+	font-size: 14px;
+	text-transform: uppercase;
+}
 
 p {
-	margin-bottom: 15px;
+	font-size: 18px;
+	color: $nbBlack;
+
+	a {
+		color: $blue;
+		position: relative;
+		display: inline-block;
+		z-index: 0;
+
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 1px;
+			left: 0;
+			bottom: 0;
+			background-color: $blue;
+			transition: inherit;
+		}
+
+		@include hover {
+			text-decoration: none;
+			color: $white;
+
+			&::after {
+				height: 100%;
+			}
+		}
+	}
 }
 
 blockquote {
-	border-top: 1px solid $black;
-	border-bottom: 1px solid $black;
-	padding: 30px 0;
+	margin-left: 8px;
+	border-left: 6px solid $blue;
+	position: relative;
+	padding: 13px 25px 13px 50px;
+	font-style: normal;
+
+	&::before,
+	&::after {
+		position: absolute;
+		left: -6px;
+		top: 50%;
+	}
+
+	&::before {
+		color: $green;
+		font-size: 22px;
+		transform: translate(-35%, -50%);
+		z-index: 1;
+	}
+
+	&::after {
+		background-color: $white;
+		content: '';
+		width: 6px;
+		height: 25px;
+		z-index: 0;
+		transform: translateY(-50%);
+	}
+
+	p,
+	span {
+		color: $blue;
+	}
+
+	p {
+		font-size: 26px;
+		margin-bottom: 20px;
+
+		&:last-of-type {
+			margin-bottom: 20px;
+		}
+	}
+
+	span {
+		font-size: 18px;
+	}
+}
+
+ul {
+	list-style-type: none;
 }
 
 ol li {
-	list-style-type: decimal-leading-zero;
+	list-style-type: decimal;
 }
 
 
 img {
-	max-width: 100%;
+	width: 100%;
+	height: auto;
 }

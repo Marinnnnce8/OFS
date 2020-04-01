@@ -1,0 +1,37 @@
+.uk-breadcrumb {
+    color: $white;
+    margin-top: 10px;
+    * {
+        display: flex;
+        align-items: center;
+    }
+    >:nth-child(n+2):not(.uk-first-column)::before {
+        content: font-char($caret-right);
+        font-family: 'svgicons';
+        color: $white;
+        font-size: 12px;
+    }
+    a, >:last-child>* {
+        font-size: 14px;
+        color: $white;
+    }
+    a {
+        position: relative;
+        &::after {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            height: 1px;
+            content: '';
+            background-color: $white;
+            transition: inherit;
+        }
+        @include hover {
+            color: $white;
+            &::after {
+                opacity: 0;
+            }
+        }
+    }
+}

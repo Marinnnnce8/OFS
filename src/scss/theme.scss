@@ -4,13 +4,13 @@
 // Config
 @import 'config/variables.scss';
 
+// Helpers
+@import 'helpers/mixins.scss';
+
 // Base
 @import 'base/fonts.scss';
 @import 'base/layout.scss';
 @import 'base/typography.scss';
-
-// Helpers
-@import 'helpers/mixins.scss';
 
 // Layout / Helpers
 @import 'layout/_icon-font.scss';
@@ -34,6 +34,7 @@
 
 // Modules
 @import 'modules/banner.scss';
+@import 'modules/latest-news.scss';
 @import 'modules/basic-block.scss';
 @import 'modules/slider.scss';
 @import 'modules/team-list.scss';
@@ -89,7 +90,21 @@ a:hover {
 .uk-radio:not(.uk-form-danger),
 .uk-checkbox:checked:not(.uk-form-danger),
 .uk-radio:checked:not(.uk-form-danger) {
-	border-color: $nbBlack;
+	border-color: rgba($blue, .2);
+	border-width: 2px;
+	border-radius: 8px;
+	font-size: 16px;
+	color: $nbBlack;
+	min-height: 55px;
+	padding: 18px 20px;
+	&:focus {
+		border-color: rgba($blue, 1);
+	}
+}
+
+.uk-textarea:not(.uk-form-danger) {
+	min-height: 150px;
+	resize: none;
 }
 
 // theme/header

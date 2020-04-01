@@ -2,21 +2,17 @@
 //------------------------------------------------------------------------------
 .banner {
 	margin-bottom: 20px;
+	padding: 0 30px;
 }
-.banner__content {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 20px;
-	background-color: rgba($white, 0.5);
-}
-.banner__content--right {
-	left: auto;
-	right: 0;
-}
-.banner__title {
-	font-size: 24px;
-}
-.banner__holder {
-	position: relative;
+
+.banner-inner {
+	min-height: 245px;
+	background-color: $blue;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	padding-bottom: 40px;
+	.uk-container {
+		height: 100%;
+		min-height: inherit;
+	}
 }

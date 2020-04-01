@@ -4,6 +4,7 @@ a,
 button {
 	appearance: none;
 	outline: none;
+	transition: $nbSec ease-in-out;
 }
 
 button,
@@ -30,6 +31,7 @@ input[type='submit'] {
 	min-width: 230px;
 	text-align: left;
 	color: $white;
+	z-index: 1;
 
 	>span,
 	&::before,
