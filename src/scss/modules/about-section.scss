@@ -1,0 +1,20 @@
+.about-section {
+    padding: 110px 0 80px;
+    >.uk-container >.uk-flex {
+        .uk-width-1-2 {
+            &:first-of-type {
+                padding-right: 75px;
+            }
+        }
+    }
+    p {
+        font-size: 20px;
+        &:last-of-type {
+            margin-bottom: 30px;
+        }
+    }
+    .uk-button {
+        max-width: 320px;
+        width: 100%;
+    }
+}

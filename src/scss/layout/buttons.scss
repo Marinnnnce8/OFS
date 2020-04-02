@@ -49,6 +49,7 @@ input[type='submit'] {
 		top: 50%;
 		transform: translateY(-50%);
 		right: 30px;
+
 		&::before {
 			content: font-char($arrow-right);
 			font-family: 'svgicons';
@@ -72,14 +73,17 @@ input[type='submit'] {
 		padding: 6px 35px 6px 25px;
 		font-size: 14px;
 		min-width: 170px;
+
 		>span {
 			right: 20px;
 		}
 	}
+
 	&.uk-button-large {
 		padding: 6px 50px 9px 40px;
 		font-size: 20px;
 		min-width: 240px;
+
 		>span {
 			right: 25px;
 		}
@@ -124,6 +128,7 @@ input[type='submit'] {
 	@include hover {
 		color: $white;
 		border-color: $blue-dark;
+
 		>span::before {
 			color: $white;
 		}
@@ -146,9 +151,11 @@ input[type='submit'] {
 	color: $blue;
 	transition: $nbSec ease-in-out;
 	min-width: auto;
+
 	&::after {
 		display: none;
 	}
+
 	&::before {
 		content: font-char($arrow-right);
 		font-family: 'svgicons';
@@ -161,15 +168,85 @@ input[type='submit'] {
 		transition: $nbSec ease-in-out;
 		border: 0;
 	}
+
 	&.uk-text-large {
 		font-size: 20px;
 		padding: 0 40px 0 0;
 	}
+
 	@include hover {
 		color: $blue-dark;
+
 		&::before {
 			transform: translateY(-50%);
 			color: inherit;
+		}
+	}
+}
+
+.enquire-button {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	z-index: 5;
+	border-radius: 0;
+	text-align: center;
+	font-size: 18px;
+
+	span {
+		transform: none;
+		right: auto;
+		margin-left: 18px;
+		position: relative;
+		top: 2px;
+	}
+}
+
+.scroll-button {
+	position: absolute;
+	left: 70px;
+	display: inline-block;
+	bottom: 0;
+	transform: translateY(50%);
+	z-index: 0;
+	width: 125px;
+	height: 125px;
+	&::after, a, a::before {
+		position: absolute;
+	} 
+	&::after {
+		color: $white;
+		font-family: 'svgicons';
+		font-size: 26px;
+		top: 49%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: '';
+		background-image: url('../img/half-circle.png');
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
+
+	a {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		background-color: $green;
+		top: calc(50% - 20px);
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		&::before {
+			color: $white;
+			font-family: 'svgicons';
+			font-size: 26px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			content: font-char($chevron-arrow-down);
+			z-index: 1;
 		}
 	}
 }

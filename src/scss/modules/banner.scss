@@ -6,13 +6,19 @@
 }
 
 .banner-inner {
-	min-height: 245px;
-	background-color: $blue;
+	min-height: 650px;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	padding-bottom: 40px;
 	.uk-container {
 		height: 100%;
 		min-height: inherit;
+	}
+}
+
+.banner-internal {
+	.banner-inner {
+		background-color: $blue;
+		min-height: 245px;
 	}
 }

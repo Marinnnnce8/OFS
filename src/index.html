@@ -1,66 +1,404 @@
 <!doctype html>
-<html lang='en-gb' class='template-home section-home'>
+<html lang='en-gb' class='template-nb-styleguide section-nb.styleguide'>
+
 <head>
 
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
 	<meta name='format-detection' content='telephone=no'>
 
-	<title>Site Name | Home</title>
+	<title>Home | Ocean Farm Services</title>
 	<meta name='description' content='This is a meta description'>
 
 	<link rel='shortcut icon' href='favicon.ico'>
 	<link rel='stylesheet' href='css/uikit.min.css' />
 	<link rel='stylesheet' href='css/theme.min.css' />
 </head>
+
 <body>
 
 	<header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
 		<nav class='uk-navbar-container uk-navbar' data-uk-navbar>
 
-			<div class='uk-navbar-left'>
-				<a href='#' class='uk-navbar-item uk-logo'>
-					<img src='img/logo.png' alt='Site Name Logo'>
-				</a>
-			</div>
+			<div class="navbar-top uk-flex uk-flex-middle uk-flex-right uk-visible@l">
+				<ul class="uk-flex">
+					<li><a href="#">Crewing/Vacancies</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Follow us on</a></li>
 
-			<div class='uk-navbar-right'>
-				<div id='nav' class='nav-toggle'>
-					<ul class='uk-navbar-nav'>
-						<li><a href='index.html'>Home</a></li>
-						<li><a href='styleguide.html'>About</a></li>
-						<li><a href='styleguide.html'>Contact</a></li>
+				</ul>
+				<ul class="uk-flex">
+					<li><a href="#" data-uk-icon="facebook" aria-label="Follow us on Facebook" title="Facebook"></a>
+					</li>
+					<li><a href="#" data-uk-icon="linkedin" aria-label="Follow us on Linkedin" title="Linkedin"></a>
+					</li>
+					<li><a href="#" data-uk-icon="instagram" aria-label="Follow us on Instagram" title="Instagram"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="navbar-bottom uk-flex uk-flex-right">
+				<div class='uk-navbar-left uk-position-center-left'>
+					<a href='#' class='uk-navbar-item uk-logo'>
+						<img src='./img/footer-logo.png' alt='Site Name Logo'>
+					</a>
+				</div>
+
+				<div class='uk-navbar-right uk-visible@l'>
+					<div id='nav' class='uk-flex uk-flex-middle'>
+						<ul class='uk-navbar-nav uk-flex uk-flex-middle'>
+							<li class='uk-parent'>
+								<button class="uk-text-uppercase" data-uk-icon='triangle-down'>Services</button>
+								<div data-uk-dropdown='mode: click'
+									class='uk-navbar-dropdown uk-navbar-dropdown-bottom-left'>
+									<ul class='uk-nav uk-navbar-dropdown-nav uk-position-z-index'>
+										<li><a href='#'>Site Services</a></li>
+										<li><a href='#'>Wellboat Services</a></li>
+										<li><a href='#'><abbr title="Remotely Operated Vehicles">ROV</abbr> Services</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class='uk-parent'>
+								<button class="uk-text-uppercase" data-uk-icon='triangle-down'>Our Vessels</button>
+								<div data-uk-dropdown='mode: click'
+									class='uk-navbar-dropdown uk-navbar-dropdown-bottom-left'>
+									<ul class='uk-nav uk-navbar-dropdown-nav uk-position-z-index'>
+										<li><a href='#'>Site Services</a></li>
+										<li><a href='#'>Wellboat Services</a></li>
+										<li><a href='#'><abbr title="Remotely Operated Vehicles">ROV</abbr> Services</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class='uk-parent'>
+								<button class="uk-text-uppercase" data-uk-icon='triangle-down'>Our Clients</button>
+								<div data-uk-dropdown='mode: click'
+									class='uk-navbar-dropdown uk-navbar-dropdown-bottom-left'>
+									<ul class='uk-nav uk-navbar-dropdown-nav uk-position-z-index'>
+										<li><a href='#'>Site Services</a></li>
+										<li><a href='#'>Wellboat Services</a></li>
+										<li><a href='#'><abbr title="Remotely Operated Vehicles">ROV</abbr> Services</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li><a class="uk-text-uppercase" href='#'>About Us</a></li>
+							<li><a class="uk-text-uppercase" href='#'><abbr title="HSE">HSE</abbr></a></li>
+							<li><a class="uk-text-uppercase" href='#'>Contact</a></li>
+						</ul>
+						<a href="#" class="uk-button uk-button-secondary">Enquire Now<span
+								role="presentation"></span></a>
+					</div>
+				</div>
+			</div>
+			<button class='uk-hidden@l burger-menu' data-uk-toggle='target: #menu-nav'
+				aria-label='Open menu navigation'>
+				<span role='presentation'></span></button>
+			<div id='menu-nav' data-uk-modal class='uk-hidden@l'>
+				<div class='uk-modal-dialog uk-modal-body uk-width-1-1'>
+					<button class='uk-modal-close-default uk-position-top-right' data-uk-close
+						aria-label='Close navigation menu'></button>
+					<ul class="uk-flex uk-padding-remove nav-social">
+						<li><a href="#" data-uk-icon="facebook" aria-label="Follow us on Facebook" title="Facebook"></a>
+						</li>
+						<li><a href="#" data-uk-icon="linkedin" aria-label="Follow us on Linkedin" title="Linkedin"></a>
+						</li>
+						<li><a href="#" data-uk-icon="instagram" aria-label="Follow us on Instagram"
+								title="Instagram"></a>
+						</li>
+					</ul>
+					<ul class='uk-flex uk-flex-column nav-bottom'>
+						<li class='uk-parent'>
+							<button data-uk-icon='triangle-right'>Services</button>
+							<div data-uk-dropdown='mode: click' class='uk-navbar-dropdown' id='nav-children-1'>
+								<ul class='uk-nav uk-navbar-dropdown-nav uk-position-z-index'>
+									<li><button data-uk-toggle='target: #nav-children-1; animation: true'
+											data-uk-icon='triangle-left'>Back</button></li>
+									<li><span>Services</span></li>
+									<li><a href='#'>Site Services</a></li>
+									<li><a href='#'>Wellboat Services</a></li>
+									<li><a href='#'><abbr title="Remotely Operated Vehicles">ROV</abbr> Services</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class='uk-parent'>
+							<button data-uk-icon='triangle-right'>Our Vessels</button>
+							<div data-uk-dropdown='mode: click' class='uk-navbar-dropdown' id='nav-children-2'>
+								<ul class='uk-nav uk-navbar-dropdown-nav'>
+									<li><button data-uk-toggle='target: #nav-children-2; animation: true'
+											data-uk-icon='triangle-left'>Back</button></li>
+									<li><span>Our Vessels</span>
+									</li>
+									<li><a href='#'>Site Services</a></li>
+									<li><a href='#'>Wellboat Services</a></li>
+									<li><a href='#'><abbr title="Remotely Operated Vehicles">ROV</abbr> Services</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class='uk-parent'>
+							<button data-uk-icon='triangle-right'>Our Clients</button>
+							<div data-uk-dropdown='mode: click' class='uk-navbar-dropdown' id='nav-children-3'>
+								<ul class='uk-nav uk-navbar-dropdown-nav'>
+									<li><button data-uk-toggle='target: #nav-children-3; animation: true'
+											data-uk-icon='triangle-left'>Back</button></li>
+									<li><span>Our Clients</span></li>
+									<li><a href='#'>Site Services</a></li>
+									<li><a href='#'>Wellboat Services</a></li>
+									<li><a href='#'><abbr title="Remotely Operated Vehicles">ROV</abbr> Services</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li><a href='#'>About Us</a></li>
+						<li><a href='#'><abbr title="HSE">HSE</abbr></a></li>
+						<li><a href='#'>Contact</a></li>
+						<li><a href='#'>Crewing/Vacancies</a></li>
+						<li><a href='#'>News</a></li>
 					</ul>
 				</div>
-				<a href='#' class='uk-navbar-toggle uk-hidden@s' data-uk-toggle='{"target": "#nav", "cls": "nav-toggle"}'>
-					<span data-uk-navbar-toggle-icon></span>
-				</a>
 			</div>
-
 		</nav>
 	</header>
 
-	<footer class='footer uk-padding-large uk-padding-remove-horizontal'>
-		<div class='uk-container uk-text-center'>
+	<main class='nb-main uk-margin-large-bottom'>
+		<a href='#' class='uk-button uk-button-secondary enquire-button uk-hidden@s'>Enquire Now<span
+				role="presentation"></span></a>
 
-			<div class='nb-legal uk-margin-small-bottom'>
-				<ul>
-					<li><a href='#'>Terms &amp; Conditions</a></li>
-					<li><a href='#'>Privacy Policy</a></li>
-					<li><a href='#'>Disclaimer</a></li>	
-				</ul>
+		<section class="banner uk-position-relative">
+			<div class="banner-inner uk-background-cover" data-uk-img style="background-image: url(./img/banner.jpg);">
+				<div class="uk-container uk-position-relative">
+					<div class="banner-text uk-position-center-left uk-width-1-2@l">
+						<h1>one-stop-shop for salmon farm companies throughout Scotland</h1>
+					</div>
+				</div>
 			</div>
+			<div class="scroll-button">
+				<a href="#ofs-goals" data-uk-scroll aria-label="Scroll to next section"></a>
+			</div>
+		</section>
 
-			<div class='nb-copyright uk-margin-small-bottom'>Copyright &copy; 2019 Client Name. All rights reserved.</div>
+		<section class="about-section">
+			<div class="uk-container">
+				<div class="uk-flex">
+					<div class="uk-width-1-2">
+						<h2>Our goal is for Ocean Farm Services to operate as a one-stop-shop for all Vessel Services
+							required for any Salmon Farm in Scotland, covering their every need.
+						</h2>
+					</div>
+					<div class="uk-width-1-2">
+						<p>Ocean Farm Services Ltd. is a new company joining two well-established local Shetland firms,
+							Whalsay based Aurora Marine Ltd. and Scalloway based North Isles Marine Ltd.</p>
+						<p>Both companies will combine forces to provide a stronger, broader Vessel service to
+							Scotland’s growing Aquaculture industry.</p>
+						<a href="#" class="uk-button uk-button-primary">Find out more about us<span
+								role="presentation"></span></a>
+					</div>
+				</div>
+			</div>
+		</section>
 
-			<div class='nb-credit'>Website by 
-				<a href='https://www.nbcommunication.com/' title='NB Communication - Digital Marketing Agency'>
-					NB <img 
-						src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
-						data-src='https://brand.nbcommunication.com/logo/web/nb.png'
-						alt='NB Communication Ltd Logo'
-						data-uk-img>
-				</a>
+		<section class="services-section">
+			<div class="uk-container">
+				<h2 class="uk-text-uppercase">Our services</h2>
+				<div data-uk-grid class="uk-grid-small uk-child-width-1-3@m">
+					<div class="services-box">
+						<div class="uk-card uk-background-cover" data-uk-img
+							style="background-image: url(./img/banner.jpg);">
+							<a href="#" class="uk-position-cover" aria-label="Find out more"></a>
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">Site Services</h3>
+								<p>To best optimise the page and provide the visitor with useful and informative text,
+									it
+									would be good to have a sentence or two included here.</p>
+								<a href="#" class="uk-button uk-button-text">Find out more</a>
+							</div>
+						</div>
+					</div>
+					<div class="services-box">
+						<div class="uk-card uk-background-cover" data-uk-img
+							style="background-image: url(./img/banner.jpg);">
+							<a href="#" class="uk-position-cover" aria-label="Find out more"></a>
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">Wellboat Services</h3>
+								<p>To best optimise the page and provide the visitor with useful and informative text,
+									it
+									would be good to have a sentence or two included here.</p>
+								<a href="#" class="uk-button uk-button-text">Find out more</a>
+							</div>
+						</div>
+					</div>
+					<div class="services-box">
+						<div class="uk-card uk-background-cover" data-uk-img
+							style="background-image: url(./img/banner.jpg);">
+							<a href="#" class="uk-position-cover" aria-label="Find out more"></a>
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">ROV Services</h3>
+								<p>To best optimise the page and provide the visitor with useful and informative text,
+									it
+									would be good to have a sentence or two included here.</p>
+								<a href="#" class="uk-button uk-button-text">Find out more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="uk-container uk-margin-large-top" id="ofs-goals">
+			<div class='nb-block nb-block-clients uk-clearfix' data-nb-block='clients'>
+				<div class="uk-container uk-container-small uk-margin-medium-bottom">
+					<h2>Our Clients</h2>
+				</div>
+
+				<div class="nb-client-box uk-margin-large-bottom uk-position-relative">
+					<div class="nb-client-text">
+						<img src="./img/cooke-aquaculture.jpg" alt="image">
+						<h3>Cooke Aquaculture</h3>
+						<p>To best optimise the page and provide the visitor with useful and informative text, it would
+							be good to have a sentence or two included here. This is some body text. It is not meant to
+							be read. These words are here to provide the reader with a basic impression of how actual
+							text will appear in its final presentation.</p>
+						<span class="uk-text-uppercase">Services provided</span>
+						<ul>
+							<li><a href="#">Site Services</a></li>
+							<li><a href="#">Wellboat Services</a></li>
+							<li><a href="#"><abbr title="Remotely Operated Vehicles">ROV</abbr> Services</a></li>
+						</ul>
+					</div>
+					<blockquote class="font-quote uk-position-bottom-right">
+						<p>“Blockquote. Style to be good must be clear. Clearness is secured by using words that are
+							current and ordinary. Vestibulum ut elit ornare massa tincidunt malesuada eu feugiat diam.
+							Nunc erat nisl, rutrum eget rhoncus nec, fringilla in est. Integer bibendum vel massa
+							consequat sagittis. Duis at consectetur velit. ”</p>
+						<span>- Michael Thomas, CEO</span>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+
+		<div class="latest-news">
+			<div class="uk-container">
+				<div class="news-box uk-position-relative">
+					<div class="uk-position-top-right news-latest">
+						<div class="uk-flex uk-flex-column uk-flex-between">
+							<h2 class="uk-text-uppercase">Latest news</h2>
+							<a href="#" class="uk-button uk-button-primary uk-button-large">View all news<span
+									role="presentation"></span></a>
+						</div>
+					</div>
+					<ul>
+						<li class="uk-position-relative">
+							<a href="#" class="uk-position-cover" aria-label="Read more"></a>
+							<div class="uk-flex">
+								<div>
+									<img data-uk-img src="./img/latest-news-1.png" alt="image">
+								</div>
+								<div class="news-info">
+									<span class="font-calendar">18 December 2018</span>
+									<h3>Scottish Aquaculture and Wellboat Services Firms to form New Joint Venture -
+										Salmon
+										Business</h3>
+									<a href="#" class="uk-button uk-button-text">Read more</a>
+								</div>
+							</div>
+						</li>
+						<li class="uk-position-relative">
+							<a href="#" class="uk-position-cover" aria-label="Read more"></a>
+							<div class="uk-flex">
+								<div>
+									<img data-uk-img src="./img/latest-news-2.jpg" alt="image">
+								</div>
+								<div class="news-info">
+									<span class="font-calendar">05 February 2019</span>
+									<h3>New Boat for new Shetland Company - Fish Update</h3>
+									<a href="#" class="uk-button uk-button-text">Read more</a>
+								</div>
+							</div>
+						</li>
+						<li class="uk-position-relative">
+							<a href="#" class="uk-position-cover" aria-label="Read more"></a>
+							<div class="uk-flex">
+								<div>
+									<img data-uk-img src="./img/latest-news-3.jpg" alt="image">
+								</div>
+								<div class="news-info">
+									<span class="font-calendar">25 March 2020</span>
+									<h3>Shetland Aquaculture Firm Orders First Vessel - Fish Farming Expert</h3>
+									<a href="#" class="uk-button uk-button-text">Read more</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class='footer'>
+		<div class="footer-top uk-background-cover" data-uk-img
+			style="background-image: url('./img/footer-banner.png');">
+			<div class="uk-container">
+				<div class="uk-flex">
+					<div class="footer-enquire">
+						<h2>For more information, or to discuss how Ocean Farm Services can help you, get in touch using
+							the contact details and we'll be happy to assist.</h2>
+						<div class="uk-flex uk-flex-middle">
+							<div>
+								<a href="#" class="uk-button uk-button-secondary">Enquire now<span
+										role="presentation"></span></a>
+							</div>
+							<ul class="uk-flex">
+								<li><a href="#" data-uk-icon="facebook" title="Facebook"
+										aria-label="Contact us on Facebook"></a></li>
+								<li><a href="#" data-uk-icon="linkedin" title="Linkedin"
+										aria-label="Contact us on Linkedin"></a></li>
+								<li><a href="#" data-uk-icon="instagram" title="instagram"
+										aria-label="Contact us on instagram"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer-contact">
+						<h3>Ocean Farm Services</h3>
+						<span>Vaarhjem Symbister, Whalsay, Shetland, Scotland, ZE2 9AQ</span>
+						<ul>
+							<li><a href="mailto:info@oceanfarmservices.com"><span>E:</span>
+									info@oceanfarmservices.com</a></li>
+							<li><a href="tel:+4407979970148"><span>T:</span> +44 (0)7979 970148</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-logos uk-flex uk-flex-right uk-position-relative">
+			<img class="uk-position-center-left" data-uk-img src="./img/footer-logo.png" alt="image">
+			<ul class="uk-flex uk-flex-middle">
+				<li><img src="./img/aurora-marine.png" alt="image" data-uk-img></li>
+				<li><img src="./img/north-isles-marine.png" alt="image" data-uk-img></li>
+			</ul>
+		</div>
+		<div class="footer-copyright">
+			<div class='uk-container uk-flex uk-flex-between uk-flex-middle'>
+				<div class='nb-copyright'>Copyright &copy; 2019 Client Name. All rights reserved.
+				</div>
+
+				<div class='nb-legal'>
+					<ul>
+						<li><a href='#'>Terms &amp; Conditions</a></li>
+						<li><a href='#'>Privacy Policy</a></li>
+						<li><a href='#'>Disclaimer</a></li>
+						<li class='nb-credit'>Website by
+							<a href='https://www.nbcommunication.com/'
+								title='NB Communication - Digital Marketing Agency'>
+								NB <img
+									src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+									data-src='https://brand.nbcommunication.com/logo/web/nb.png'
+									alt='NB Communication Ltd Logo' data-uk-img>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -70,4 +408,5 @@
 	<script src='js/nb.min.js'></script>
 	<script src='js/theme.min.js'></script>
 </body>
+
 </html>

@@ -1,5 +1,4 @@
 .nb-legal {
-	padding: $nbGutterSmall 0;
 
 	ul {
 		margin: 0;
@@ -9,32 +8,51 @@
 			display: inline-block;
 			list-style: none;
 			margin: 0;
-			padding: 0;
+
+			&:not(:last-of-type) {
+				padding-right: 25px;
+			}
 
 			a {
-				color: $nbGrey;
+				color: $white;
+				position: relative;
+				font-size: 13px;
+
+				&::after {
+					position: absolute;
+					height: 1px;
+					background-color: $white;
+					content: '';
+					width: 100%;
+					opacity: 0;
+					transition: inherit;
+					left: 0;
+					bottom: 0;
+				}
 
 				@include hover {
-					color: $nbBlack;
+					color: $white;
+					text-decoration: none;
+
+					&::after {
+						opacity: 1;
+					}
 				}
 			}
+		}
+	}
 
-			&:after {
-				content: "|";
-				color: $nbLightGrey;
-				display: inline-block;
-				padding: 0 $nbGutter;
-			}
+	@media (max-width: $breakpointXsmallMax) {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: baseline;
 
-			&:last-child:after {
-				content: "";
-			}
+			li {
+				margin-bottom: 3px;
 
-			@media (max-width: $breakpointMobile) {
-				display: block;
-
-				&:after {
-					display: none;
+				&:not(:last-of-type) {
+					padding-right: 20px;
 				}
 			}
 		}

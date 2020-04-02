@@ -1,5 +1,4 @@
 .nb-main {
-	background-color: $white-shade;
 
 	.uk-text-lead {
 		font-weight: $extra-bold;
@@ -676,6 +675,7 @@
 			padding: 0 0 0 10px;
 			box-shadow: none;
 			margin: 0;
+			z-index: 1;
 			span {
 				margin-bottom: 7px;
 				font-size: 10px;
@@ -706,6 +706,19 @@
 	&-embed {
 		iframe {
 			width: 100%;
+		}
+	}
+}
+
+
+.nb-copyright {
+	color: $white;
+	font-size: 13px;
+	@media (max-width: $breakpointXsmallMax) {
+		margin-bottom: 25px;
+		a img {
+			position: relative;
+			top: 1px;
 		}
 	}
 }

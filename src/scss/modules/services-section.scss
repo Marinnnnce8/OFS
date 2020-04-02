@@ -1,0 +1,68 @@
+.services-section {
+    padding: 80px 0;
+
+    h2 {
+        font-size: 57px;
+    }
+
+    .uk-grid-small>* {
+        padding-left: 5px;
+    }
+
+    .services-box {
+        &:first-of-type .uk-card {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        &:last-of-type .uk-card {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
+
+    .uk-card {
+        position: relative;
+        min-height: 400px;
+        overflow: hidden;
+        >a {
+            z-index: 1;
+        }
+        @include hover {
+            .uk-card-body {
+                transform: translateY(0);
+            }
+            p {
+                top: 0;
+            }
+        }
+    }
+
+    .uk-card-title,
+    p,
+    .uk-button {
+        color: $white;
+    }
+
+    .uk-card-title {
+        text-transform: uppercase;
+    }
+
+    .uk-card-body {
+        background: linear-gradient(to top, $blue 53%, transparent 100%);
+        padding: 80px 30px 30px 40px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        transform: translateY(53%);
+        transition: $nbSec ease-in-out;
+
+        p {
+            position: relative;
+            top: 20px;
+            margin-top: 0;
+            transition: .1s ease-in;
+            margin-bottom: 15px;
+        }
+    }
+}
