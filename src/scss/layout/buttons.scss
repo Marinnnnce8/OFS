@@ -212,20 +212,22 @@ input[type='submit'] {
 	z-index: 0;
 	width: 125px;
 	height: 125px;
-	&::after, a, a::before {
+
+	&::after,
+	a,
+	a::before {
 		position: absolute;
-	} 
+	}
+
 	&::after {
-		color: $white;
-		font-family: 'svgicons';
-		font-size: 26px;
 		top: 49%;
-		left: 0;
+		left: 1px;
 		width: 100%;
 		height: 100%;
 		content: '';
 		background-image: url('../img/half-circle.png');
 		background-repeat: no-repeat;
+		background-size: contain;
 		z-index: -1;
 	}
 
@@ -234,10 +236,11 @@ input[type='submit'] {
 		height: 80px;
 		border-radius: 50%;
 		background-color: $green;
-		top: calc(50% - 20px);
+		top: calc(50% - 22px);
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 1;
+
 		&::before {
 			color: $white;
 			font-family: 'svgicons';
@@ -247,6 +250,26 @@ input[type='submit'] {
 			transform: translate(-50%, -50%);
 			content: font-char($chevron-arrow-down);
 			z-index: 1;
+			transition: $nbSec ease-in-out;
+		}
+		@include hover {
+			text-decoration: none;
+			&::before {
+				transform: translate(-50%, -30%);
+			}
+		}
+	}
+
+	@media (max-width: $breakpointSmall) {
+		width: 78px;
+		height: 78px;
+		left: 35px;
+		a {
+			width: 48px;
+			height: 48px;
+			&::before {
+				font-size: 20px;
+			}
 		}
 	}
 }

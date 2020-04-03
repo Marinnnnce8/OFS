@@ -1,9 +1,19 @@
 .latest-news {
     margin: 135px 0 150px;
+
+    @media (max-width: $breakpointMedium) {
+        margin: 110px 0 40px;
+    }
+
+    @media (max-width: $breakpointMediumMax) {
+        .uk-container {
+            padding: 0 20px;
+        }
+    }
 }
 
 .news-box {
-    padding-right: 340px;
+    padding-right: 28.33%;
 
     &::after {
         position: absolute;
@@ -21,7 +31,6 @@
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         background-color: $white;
-        background-repeat: 20px;
         padding: 55px 110px 50px 60px;
         margin: 0;
 
@@ -38,6 +47,39 @@
             }
         }
     }
+
+    @media (max-width: $breakpointMedium) {
+        padding-top: 230px;
+        padding-right: 0;
+
+        &::after {
+            top: 230px;
+        }
+
+        ul {
+            padding: 55px 80px 50px 60px;
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+        ul {
+            padding: 120px 20px 15px;
+
+            li {
+                margin-bottom: 40px;
+                &:not(:last-of-type) {
+                    margin-bottom: 40px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .uk-flex {
+            flex-direction: column;
+        }
+    }
 }
 
 
@@ -45,32 +87,70 @@
     background-color: $blue;
     box-shadow: 0 10px 30px -3px rgba($blue, .3);
     border-radius: 20px;
-    max-width: 400px;
-    min-height: 415px;
+    max-width: 33.33%;
+    height: 415px;
     padding: 60px 50px 50px;
-    >div {
-        min-height: 305px;
-    }
+
     h2 {
         color: $white;
         font-size: 57px;
         font-weight: $extra-bold;
     }
+
     a {
         color: $blue;
         border: 2px solid transparent;
+
         span::before {
             color: $blue;
             transition: inherit;
         }
+
         &::after {
             background-color: $white;
         }
+
         @include hover {
             border-color: $white;
+
             span::before {
                 color: $white;
             }
+        }
+    }
+
+    .uk-button.uk-button-large {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    @media (max-width: $breakpointLarge) {
+        padding: 60px 35px 50px;
+
+        .uk-button.uk-button-large {
+            padding: 6px 40px 9px 30px;
+        }
+    }
+
+    @media (max-width: $breakpointMedium) {
+        max-width: 280px;
+        max-height: 295px;
+        min-height: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        right: -20px;
+        padding: 30px 20px;
+
+        h2 {
+            font-size: 52px;
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+        padding: 20px 40px 30px 20px;
+
+        h2 {
+            font-size: 44px;
         }
     }
 }
@@ -92,12 +172,13 @@
     span {
         display: inline-block;
         padding-left: 25px;
+        font-size: 13px;
         position: relative;
 
         &::before {
             position: absolute;
             left: 0;
-            top: 4px;
+            top: 2px;
             font-size: 14px;
         }
     }
@@ -105,5 +186,9 @@
     a {
         font-size: 14px;
         padding: 0 25px 0 0;
+    }
+    @media (max-width: $breakpointSmallMax) {
+        padding-left: 0;
+        padding-top: 10px;
     }
 }

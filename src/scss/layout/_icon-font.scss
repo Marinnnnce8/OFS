@@ -45,41 +45,50 @@
 	@if $filename == chevron-right {
 		$char: '\E006';
 	}
-	@if $filename == envelope {
+	@if $filename == crew {
 		$char: '\E007';
 	}
-	@if $filename == external-link {
+	@if $filename == download {
 		$char: '\E008';
 	}
-	@if $filename == instagram-logo {
+	@if $filename == envelope {
 		$char: '\E009';
 	}
-	@if $filename == live-streaming {
+	@if $filename == external-link {
 		$char: '\E00A';
 	}
-	@if $filename == minus {
+	@if $filename == instagram-logo {
 		$char: '\E00B';
 	}
-	@if $filename == play-button-arrowhead {
+	@if $filename == live-streaming {
 		$char: '\E00C';
 	}
-	@if $filename == plus {
+	@if $filename == minus {
 		$char: '\E00D';
 	}
-	@if $filename == quote {
+	@if $filename == play-button-arrowhead {
 		$char: '\E00E';
 	}
-	@if $filename == right-arrow {
+	@if $filename == plus {
 		$char: '\E00F';
 	}
-	@if $filename == rounded-corner-white-1 {
+	@if $filename == quote {
 		$char: '\E010';
 	}
-	@if $filename == rounded-corner-white {
+	@if $filename == right-arrow {
 		$char: '\E011';
 	}
-	@if $filename == time {
+	@if $filename == rounded-corner-white-1 {
 		$char: '\E012';
+	}
+	@if $filename == rounded-corner-white {
+		$char: '\E013';
+	}
+	@if $filename == ship {
+		$char: '\E014';
+	}
+	@if $filename == time {
+		$char: '\E015';
 	}
 
 	@return $char;
@@ -118,6 +127,12 @@
 .font-chevron-right {
 	@include font(chevron-right);
 }
+.font-crew {
+	@include font(crew);
+}
+.font-download {
+	@include font(download);
+}
 .font-envelope {
 	@include font(envelope);
 }
@@ -150,6 +165,9 @@
 }
 .font-rounded-corner-white {
 	@include font(rounded-corner-white);
+}
+.font-ship {
+	@include font(ship);
 }
 .font-time {
 	@include font(time);

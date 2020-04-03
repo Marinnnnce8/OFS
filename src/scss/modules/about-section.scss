@@ -1,20 +1,58 @@
 .about-section {
     padding: 110px 0 80px;
-    >.uk-container >.uk-flex {
-        .uk-width-1-2 {
+
+    >.uk-container>.uk-flex {
+        .uk-width-1-2\@m {
             &:first-of-type {
                 padding-right: 75px;
             }
+
+            &:last-of-type {
+                padding-right: 40px;
+            }
         }
     }
+
     p {
         font-size: 20px;
+
         &:last-of-type {
             margin-bottom: 30px;
         }
     }
+
     .uk-button {
         max-width: 320px;
         width: 100%;
+    }
+
+    @media (max-width: $breakpointMedium) {
+        padding: 50px 0 55px;
+
+        >.uk-container>.uk-flex {
+            display: block;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
+        h2 {
+            font-size: 26px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 15px;
+
+            &:not(:first-of-type) {
+                margin-top: 15px;
+            }
+            &:last-of-type {
+                margin-bottom: 40px;
+            }
+        }
     }
 }

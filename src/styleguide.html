@@ -39,7 +39,7 @@
 			<div class="navbar-bottom uk-flex uk-flex-right">
 				<div class='uk-navbar-left uk-position-center-left'>
 					<a href='#' class='uk-navbar-item uk-logo'>
-						<img src='./img/footer-logo.png' alt='Site Name Logo'>
+						<img src='./img/footer-logo.png' alt='Ocean Farm Services Logo' title="Ocean Farm Services">
 					</a>
 				</div>
 
@@ -520,9 +520,9 @@
 			</div>
 
 			<div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
-				<h2>Accordion Functionality</h2>
+				<h2 data-uk-scrollspy="cls: uk-animation-fade; delay: 300;">Accordion Functionality</h2>
 
-				<ul data-uk-accordion>
+				<ul data-uk-accordion data-uk-scrollspy="cls: uk-animation-fade; target: >li; delay: 350;">
 					<li class="uk-open">
 						<a class="uk-accordion-title" href="#">Item 1</a>
 						<div class="uk-accordion-content">
@@ -617,11 +617,11 @@
 		<div class="uk-container uk-margin-large-top">
 			<div class='nb-block nb-block-clients uk-clearfix' data-nb-block='clients'>
 				<div class="uk-container uk-container-small uk-margin-medium-bottom">
-					<h2>Our Clients</h2>
+					<h2 data-uk-scrollspy="cls: uk-animation-slide-top" data-uk-scrollspy="cls: uk-animation-fade; delay: 300;">Our Clients</h2>
 				</div>
 
 				<div class="nb-client-box uk-margin-large-bottom uk-position-relative">
-					<div class="nb-client-text">
+					<div class="nb-client-text" data-uk-scrollspy="cls: uk-animation-slide-left; delay: 450;">
 						<img src="./img/cooke-aquaculture.jpg" alt="image">
 						<h3>Cooke Aquaculture</h3>
 						<p>To best optimise the page and provide the visitor with useful and informative text, it would
@@ -635,7 +635,7 @@
 							<li><a href="#"><abbr title="Remotely Operated Vehicles">ROV</abbr> Services</a></li>
 						</ul>
 					</div>
-					<blockquote class="font-quote uk-position-bottom-right">
+					<blockquote class="font-quote uk-position-bottom-right" data-uk-scrollspy="cls: uk-animation-fade; delay: 350;">
 						<p>“Blockquote. Style to be good must be clear. Clearness is secured by using words that are
 							current and ordinary. Vestibulum ut elit ornare massa tincidunt malesuada eu feugiat diam.
 							Nunc erat nisl, rutrum eget rhoncus nec, fringilla in est. Integer bibendum vel massa
@@ -644,7 +644,7 @@
 					</blockquote>
 				</div>
 				<div class="nb-client-box uk-margin-large-bottom uk-position-relative">
-					<div class="nb-client-text">
+					<div class="nb-client-text" data-uk-scrollspy="cls: uk-animation-slide-left; delay: 450;">
 						<img src="./img/grieg-seafood.jpg" alt="image">
 						<h3>Grieg Seafood</h3>
 						<p>To best optimise the page and provide the visitor with useful and informative text, it would
@@ -658,7 +658,7 @@
 							<li><a href="#"><abbr title="Remotely Operated Vehicles">ROV</abbr> Services</a></li>
 						</ul>
 					</div>
-					<blockquote class="font-quote uk-position-bottom-right">
+					<blockquote class="font-quote uk-position-bottom-right" data-uk-scrollspy="cls: uk-animation-fade; delay: 350;">
 						<p>“Blockquote. Style to be good must be clear. Clearness is secured by using words that are
 							current and ordinary. Vestibulum ut elit ornare massa tincidunt malesuada eu feugiat diam.
 							Nunc erat nisl, rutrum eget rhoncus nec, fringilla in est. Integer bibendum vel massa
@@ -667,7 +667,7 @@
 					</blockquote>
 				</div>
 				<div class="nb-client-box uk-margin-large-bottom uk-position-relative">
-					<div class="nb-client-text">
+					<div class="nb-client-text" data-uk-scrollspy="cls: uk-animation-slide-left; delay: 450;">
 						<img src="./img/leask-marine.jpg" alt="image">
 						<h3>Leask Marine</h3>
 						<p>To best optimise the page and provide the visitor with useful and informative text, it would
@@ -681,7 +681,7 @@
 							<li><a href="#"><abbr title="Remotely Operated Vehicles">ROV</abbr> Services</a></li>
 						</ul>
 					</div>
-					<blockquote class="font-quote uk-position-bottom-right">
+					<blockquote class="font-quote uk-position-bottom-right" data-uk-scrollspy="cls: uk-animation-fade; delay: 350;">
 						<p>“Blockquote. Style to be good must be clear. Clearness is secured by using words that are
 							current and ordinary. Vestibulum ut elit ornare massa tincidunt malesuada eu feugiat diam.
 							Nunc erat nisl, rutrum eget rhoncus nec, fringilla in est. Integer bibendum vel massa
@@ -848,11 +848,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="latest-news">
+		<section class="latest-news">
 			<div class="uk-container">
-				<div class="news-box uk-position-relative">
+				<div class="news-box uk-position-relative" data-uk-scrollspy="cls: uk-animation-fade; delay: 300;">
 					<div class="uk-position-top-right news-latest">
-						<div class="uk-flex uk-flex-column uk-flex-between">
+						<div class="uk-flex uk-flex-column uk-flex-between uk-height-1-1">
 							<h2 class="uk-text-uppercase">Latest news</h2>
 							<a href="#" class="uk-button uk-button-primary uk-button-large">View all news<span
 									role="presentation"></span></a>
@@ -903,7 +903,7 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</section>
 	</main>
 
 	<footer class='footer'>
@@ -911,7 +911,7 @@
 			style="background-image: url('./img/footer-banner.png');">
 			<div class="uk-container">
 				<div class="uk-flex">
-					<div class="footer-enquire">
+					<div class="footer-enquire" data-uk-scrollspy="cls: uk-animation-fade; delay: 300;">
 						<h2>For more information, or to discuss how Ocean Farm Services can help you, get in touch using
 							the contact details and we'll be happy to assist.</h2>
 						<div class="uk-flex uk-flex-middle">
@@ -929,7 +929,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="footer-contact">
+					<div class="footer-contact" data-uk-scrollspy="cls: uk-animation-fade; delay: 400;">
 						<h3>Ocean Farm Services</h3>
 						<span>Vaarhjem Symbister, Whalsay, Shetland, Scotland, ZE2 9AQ</span>
 						<ul>
@@ -941,14 +941,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer-logos uk-flex uk-flex-right uk-position-relative">
-			<img class="uk-position-center-left" data-uk-img src="./img/footer-logo.png" alt="image">
+		<div class="footer-logos uk-flex uk-flex-right uk-position-relative" data-uk-scrollspy="cls: uk-animation-fade; delay: 300;">
+			<a href="#" class="uk-position-center-left"><img data-uk-img src="./img/footer-logo.png" alt="image"></a>
 			<ul class="uk-flex uk-flex-middle">
-				<li><img src="./img/aurora-marine.png" alt="image" data-uk-img></li>
-				<li><img src="./img/north-isles-marine.png" alt="image" data-uk-img></li>
+				<li><a href="#"><img src="./img/aurora-marine.png" alt="image" data-uk-img></a></li>
+				<li><a href="#"><img src="./img/north-isles-marine.png" alt="image" data-uk-img></a></li>
 			</ul>
 		</div>
-		<div class="footer-copyright">
+		<div class="footer-copyright" data-uk-scrollspy="cls: uk-animation-fade; delay: 300;">
 			<div class='uk-container uk-flex uk-flex-between uk-flex-middle'>
 				<div class='nb-copyright'>Copyright &copy; 2019 Client Name. All rights reserved.
 				</div>

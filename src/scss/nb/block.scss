@@ -72,6 +72,7 @@
 			font-size: 14px;
 			padding: 15px 5px;
 			text-align: left;
+			color: $nbBlack;
 		}
 
 		.align_right {
@@ -125,6 +126,56 @@
 						left: 25px;
 						bottom: 0;
 						width: calc(100% - 25px);
+						height: 1px;
+						background-color: $blue;
+						content: '';
+						transition: inherit;
+					}
+
+					@include hover {
+						text-decoration: none;
+						color: $blue-dark;
+
+						&::after {
+							background-color: $blue-dark;
+						}
+					}
+				}
+			}
+		}
+
+		ol {
+			padding-left: 0;
+			counter-reset: item;
+
+			li {
+				list-style-type: none;
+				font-size: 18px;
+				color: $nbBlack;
+				padding-left: 10px;
+
+				&:not(:last-of-type) {
+					margin-bottom: 10px;
+				}
+
+				&::before {
+					content: counter(item) '. ';
+					counter-increment: item;
+					color: $blue;
+					font-weight: $extra-bold;
+					right: 8px;
+					position: relative;
+				}
+
+				a {
+					color: $blue;
+					position: relative;
+
+					&::after {
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						width: 100%;
 						height: 1px;
 						background-color: $blue;
 						content: '';
@@ -321,6 +372,7 @@
 
 			@include hover {
 				background-color: $blue;
+				text-decoration: none;
 
 				&::before {
 					color: $white;
@@ -625,6 +677,7 @@
 				}
 
 				@include hover {
+					text-decoration: none;
 
 					&::before,
 					svg {
@@ -676,6 +729,7 @@
 			box-shadow: none;
 			margin: 0;
 			z-index: 1;
+
 			span {
 				margin-bottom: 7px;
 				font-size: 10px;
@@ -689,10 +743,11 @@
 
 			li {
 				margin-bottom: 5px;
+
 				&:not(:first-of-type) {
 					margin-left: 0;
 				}
-				
+
 				a {
 					width: 48px;
 					height: 48px;
@@ -714,11 +769,93 @@
 .nb-copyright {
 	color: $white;
 	font-size: 13px;
+
 	@media (max-width: $breakpointXsmallMax) {
 		margin-bottom: 25px;
+
 		a img {
 			position: relative;
 			top: 1px;
+		}
+	}
+}
+
+.nb-key-info-wrap {
+	position: absolute;
+	right: 40px;
+	top: 905px;
+	box-sizing: content-box;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@media (min-width: $breakpointMedium) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@media (min-width: $breakpointSmall) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@media (max-width: $breakpointLargeMax) {
+		position: relative;
+		top: auto;
+		right: auto;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+}
+
+.nb-key-info {
+	box-shadow: 0 25px 55px -11px rgba($blue, .4);
+	background-color: $white;
+	padding: 35px 25px 30px;
+	border-radius: 25px;
+	max-width: 270px;
+
+	h3 {
+		font-size: 20px;
+		margin-bottom: 25px;
+	}
+
+	ul {
+		margin-bottom: 25px;
+		padding: 0;
+
+		li {
+			border-bottom: 2px solid $blue-sky;
+			padding: 3px 0px;
+		}
+
+		span {
+			&:first-of-type {
+				color: $blue;
+				font-weight: $extra-bold;
+			}
+
+			&:last-of-type {
+				color: $nbBlack;
+				font-size: 14px;
+			}
+		}
+	}
+
+	.uk-button-secondary {
+		line-height: 1.3;
+		min-width: 100%;
+		padding: 10px 20px 11px;
+		text-transform: none;
+
+		span {
+			top: auto;
+			bottom: 0;
+			line-height: inherit;
+			right: 19px;
+
+			&::before {
+				content: font-char($download);
+			}
 		}
 	}
 }

@@ -7,6 +7,8 @@
 
     .uk-navbar-container:not(.uk-navbar-transparent) {
         background: $white-shade;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
 
     .uk-navbar-left {

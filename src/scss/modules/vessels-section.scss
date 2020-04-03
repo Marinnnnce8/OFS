@@ -1,0 +1,266 @@
+.vessels-section {
+    padding-top: 80px;
+
+    h2 {
+        font-size: 57px;
+    }
+
+    .uk-grid-small>* {
+        padding-left: 5px;
+    }
+
+    .vessels-box {
+        position: relative;
+
+        &::after {
+            box-shadow: 0 25px 65px -11px rgba($blue, .5);
+            position: absolute;
+            left: 10px;
+            width: calc(100% - 60px);
+            top: 25px;
+            bottom: 20px;
+            content: '';
+            z-index: 0;
+            transition: $nbSec ease-in-out;
+        }
+
+        &:first-of-type .uk-card {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        &:last-of-type .uk-card {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        &:last-of-type .uk-card-media-top {
+            border-bottom-right-radius: 20px;
+        }
+
+        @include hover {
+            &::after {
+                box-shadow: 0 35px 95px -11px rgba($blue, .65);
+            }
+        }
+    }
+
+    .uk-card-media-top {
+        min-height: 395px;
+    }
+
+    .uk-card-body {
+        backface-visibility: hidden;
+        position: absolute;
+        left: 0;
+        min-height: 200px;
+        padding: 30px 35px 35px;
+        margin-top: -60px;
+        bottom: 0;
+        background-color: $white;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        width: calc(100% - 40px);
+        transition: $nbSec ease-in-out;
+    }
+
+    .uk-card {
+        min-height: 540px;
+        overflow: hidden;
+        transition: $nbSec ease-in-out;
+        z-index: 1;
+
+        >a {
+            z-index: 2;
+        }
+
+        @include hover {
+            .uk-card-body {
+                min-height: 340px;
+            }
+
+            .card-bottom-text {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+
+    .uk-card-title {
+        font-size: 34px;
+        margin-bottom: 5px;
+    }
+
+    .card-top-text {
+        span {
+            color: $blue;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            background-color: $blue-lightest;
+            border-radius: 10px;
+            color: $blue;
+            padding: 12px;
+            margin: 0;
+
+            li {
+                padding-left: 23px;
+                font-size: 13px;
+                position: relative;
+
+                &:not(:first-of-type) {
+                    margin-left: 20px;
+                }
+
+                &::before {
+                    left: 0;
+                    position: absolute;
+                    color: inherit;
+                    font-size: inherit;
+                    top: 2px;
+                }
+            }
+        }
+    }
+
+    .card-bottom-text {
+        transition: $nbSec ease-in-out;
+        opacity: 0;
+        transform: translateY(40px);
+        width: calc(100% - 75px);
+
+        p {
+            font-size: 16px;
+            margin: 20px 0;
+        }
+    }
+
+    @media (max-width: $breakpointXlarge) {
+        .uk-card {
+            @include hover {
+                .uk-card-body {
+                    min-height: 480px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointMediumMax) {
+        .uk-card-title {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+        padding-top: 15px;
+
+        .uk-grid-small>* {
+            padding-left: 15px;
+        }
+
+        *+.uk-grid-margin-small,
+        .uk-grid+.uk-grid-small,
+        .uk-grid-small>.uk-grid-margin {
+            margin-top: 30px;
+        }
+
+        .vessels-box::after {
+            left: 20px;
+        }
+
+        .uk-card {
+            border-radius: 20px;
+            @include hover {
+                .uk-card-body {
+                    min-height: 300px;
+                }
+            }
+        }
+
+        .uk-card-media-top {
+            border-bottom-right-radius: 20px;
+        }
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
+
+        .uk-card {
+            min-height: 415px;
+
+            @include hover {
+                .uk-card-body {
+                    min-height: 345px;
+                }
+            }
+        }
+
+        .uk-card-media-top {
+            min-height: 280px;
+        }
+
+        .uk-card-body {
+            padding: 30px 20px 25px;
+            width: calc(100% - 20px);
+            min-height: 190px;
+        }
+
+        .uk-card-title {
+            font-size: 26px;
+        }
+
+        .card-top-text {
+            span {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                display: block;
+                padding: 9px 12px;
+
+                li {
+                    margin-bottom: 5px;
+
+                    &:not(:first-of-type) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        .card-bottom-text {
+            width: calc(100% - 40px);
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        .uk-container {
+            padding: 0 20px;
+        }
+    }
+}
+
+.vessels-title {
+    .uk-button {
+        font-size: 20px;
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+        display: block;
+
+        h2 {
+            margin-bottom: 0;
+            font-size: 44px;
+        }
+
+        .uk-button {
+            margin-bottom: 25px;
+        }
+    }
+}

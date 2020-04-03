@@ -1,5 +1,5 @@
 .services-section {
-    padding: 80px 0;
+    padding: 80px 0 40px;
 
     h2 {
         font-size: 57px;
@@ -14,6 +14,7 @@
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
+
         &:last-of-type .uk-card {
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
@@ -24,13 +25,18 @@
         position: relative;
         min-height: 400px;
         overflow: hidden;
+
         >a {
             z-index: 1;
         }
+
         @include hover {
+            box-shadow: 0 12px 42px -11px rgba($blue, .6);
+
             .uk-card-body {
                 transform: translateY(0);
             }
+
             p {
                 top: 0;
             }
@@ -63,6 +69,61 @@
             margin-top: 0;
             transition: .1s ease-in;
             margin-bottom: 15px;
+        }
+    }
+
+    @media (max-width: $breakpointLarge) {
+        .uk-card-body {
+            transform: translateY(60%);
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+        padding: 50px 0;
+
+        .uk-grid-small>* {
+            padding-left: 15px;
+        }
+
+        *+.uk-grid-margin-small,
+        .uk-grid+.uk-grid-small,
+        .uk-grid-small>.uk-grid-margin {
+            margin-top: 5px;
+        }
+
+        .uk-card {
+            border-radius: 15px;
+        }
+
+        .uk-card-body {
+            transform: translateY(45%);
+        }
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
+
+        .uk-container {
+            padding: 0 20px;
+        }
+
+        .uk-card-body {
+            padding: 60px 20px 30px;
+            transform: translateY(55%);
+        }
+
+        h2 {
+            font-size: 44px;
+            margin-bottom: 15px;
+        }
+
+        .uk-card {
+            border-radius: 10px;
+        }
+    }
+
+    @media (max-width: $breakpointMobile) {
+        .uk-card-body {
+            transform: translateY(60%);
         }
     }
 }
