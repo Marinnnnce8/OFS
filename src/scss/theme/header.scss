@@ -16,7 +16,7 @@
     }
 
     .uk-logo {
-        padding-left: 20px;
+        padding-left: 25px;
 
         img {
             width: 345px;
@@ -65,9 +65,20 @@
             }
 
             &:last-of-type li {
+                color: $white;
+                font-size: 14px;
                 display: flex;
                 align-items: center;
                 padding-left: 15px;
+                &:first-of-type {
+                    padding-left: 40px;
+                }
+
+                a {
+                    @include hover {
+                        transform: scale(1.08);
+                    }
+                }
 
                 svg {
                     width: 18px;
@@ -143,6 +154,10 @@
             padding: 0;
             font-size: 18px;
             min-height: 0;
+            transition: $nbSec ease-in-out;
+            @include hover {
+                color: $green;
+            }
         }
     }
 
@@ -204,7 +219,7 @@
         }
     }
 
-    @media (max-width: $breakpointLarge) {
+    @media (max-width: $breakpointMediumMax) {
         padding: 0;
 
         .uk-navbar-container {
@@ -254,6 +269,16 @@
         border-bottom-left-radius: 20px;
     }
 
+    .uk-navbar-dropdown-nav {
+        li {
+            a, button {
+                @include hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+
     .uk-modal-dialog {
         padding: 23px 40px 40px 20px;
     }
@@ -275,8 +300,15 @@
 
         li button,
         li a {
-            width: 100%;
             text-align: left;
+        }
+
+        li a {
+            width: 100%;
+        }
+
+        li button {
+            width: 95%;
         }
     }
 

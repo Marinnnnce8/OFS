@@ -3,19 +3,38 @@
 .banner {
 	margin-bottom: 20px;
 	padding: 0 30px;
-	@media (max-width: $breakpointSmall) {
+
+	@media (max-width: $breakpointXsmallMax) {
 		padding: 0 20px;
+		&.home .banner-text {
+			bottom: 85px;
+			max-width: 75%;
+		}
 	}
 }
 
 .banner-inner {
 	min-height: 650px;
-	border-radius: 20px;
+	border-radius: 25px;
 	padding-bottom: 40px;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: '';
+		left: 0;
+		width: 100%;
+		top: 0;
+		bottom: 0;
+		border-radius: inherit;
+		background-image: linear-gradient(to right top, $blue, $blue 9%, transparent, transparent, transparent);
+		z-index: 0;
+	}
 
 	.uk-container {
 		height: 100%;
 		min-height: inherit;
+		z-index: 1;
 	}
 
 	.banner-text {
@@ -28,21 +47,24 @@
 			max-width: 60%;
 		}
 	}
+
 	@media (max-width: $breakpointMedium) {
 		min-height: 550px;
 	}
-	@media (max-width: $breakpointSmall) {
+
+	@media (max-width: $breakpointXsmallMax) {
 		min-height: 310px;
 		padding-bottom: 0;
+
 		.uk-container {
 			padding: 0 20px;
 		}
+
 		.banner-text {
-			bottom: 85px;
 			transform: none;
 			top: auto;
 			left: 20px;
-			max-width: 75%;
+			max-width: 100%;
 		}
 	}
 }
@@ -53,8 +75,18 @@
 		min-height: 245px;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
+		&::after {
+			display: none;
+		}
 	}
+
 	.banner-text {
 		max-width: 100%;
+	}
+	@media (max-width: $breakpointSmall) {
+		.banner-text {
+			bottom: 15px;
+			max-width: 85%;
+		}
 	}
 }

@@ -5,15 +5,14 @@
         font-size: 74px;
         max-width: 33.33%;
         position: relative;
-        top: 100px;
+        top: 140px;
     }
 
     @media (max-width: $breakpointLarge) {
-        padding-top: 50px;
+        padding-top: 90px;
 
         h2 {
-            max-width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             top: 0;
         }
     }
@@ -58,6 +57,7 @@
         content: '';
         transform: translateX(100%);
     }
+
     @media (max-width: $breakpointXsmallMax) {
         min-height: 475px;
     }
@@ -67,21 +67,25 @@
     box-shadow: 0 12px 42px -11px rgba($blue, .6);
     background-color: $white;
     border-radius: 25px;
-    max-width: 590px;
+    max-width: 585px;
     width: 100%;
-    padding: 40px 60px 150px 55px;
+    padding: 48px 60px 155px 55px;
 
     img {
-        width: auto;
+        width: 100%;
+        max-width: 225px;
     }
 
     h3 {
         font-size: 44px;
-        margin: 20px 0 10px;
+        margin: 30px 0 10px;
     }
 
-    p:first-of-type {
-        margin-top: 0;
+    p {
+        margin-bottom: 25px;
+        &:first-of-type {
+            margin-top: 0;
+        }
     }
 
     .uk-button-text {
@@ -110,7 +114,7 @@
         left: -20px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        padding: 25px 20px 110px;
+        padding: 25px 25px 110px 20px;
 
         .uk-button-primary {
             border-bottom-left-radius: 0;

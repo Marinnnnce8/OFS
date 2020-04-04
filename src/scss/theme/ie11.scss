@@ -18,3 +18,10 @@ screen and (-ms-high-contrast: none) {
         max-width: 100%;
     }
 }
+
+@supports (-ms-ime-align:auto) {
+    .footer {
+        max-width: 100%;
+        overflow: hidden;
+    }
+}

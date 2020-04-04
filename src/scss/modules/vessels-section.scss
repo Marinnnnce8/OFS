@@ -143,7 +143,17 @@
         .uk-card {
             @include hover {
                 .uk-card-body {
-                    min-height: 480px;
+                    min-height: 380px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointLarge) {
+        .uk-card {
+            @include hover {
+                .uk-card-body {
+                    min-height: 475px;
                 }
             }
         }
@@ -174,6 +184,7 @@
 
         .uk-card {
             border-radius: 20px;
+
             @include hover {
                 .uk-card-body {
                     min-height: 300px;
@@ -187,9 +198,25 @@
     }
 
     @media (max-width: $breakpointXsmallMax) {
+        .vessels-box {
+            &:first-of-type .uk-card {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+            &:last-of-type .uk-card {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            &:last-of-type .uk-card-media-top {
+                border-bottom-right-radius: 10px;
+            }
+        }
 
         .uk-card {
             min-height: 415px;
+            border-radius: 10px;
 
             @include hover {
                 .uk-card-body {
@@ -200,12 +227,16 @@
 
         .uk-card-media-top {
             min-height: 280px;
+            border-bottom-right-radius: 10px;
         }
 
         .uk-card-body {
             padding: 30px 20px 25px;
             width: calc(100% - 20px);
             min-height: 190px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
         .uk-card-title {
@@ -261,6 +292,26 @@
 
         .uk-button {
             margin-bottom: 25px;
+        }
+    }
+}
+
+.vessels-section-alt {
+    .vessel-button-wrap {
+        margin-top: 50px;
+
+        .uk-button-default {
+            border: 2px solid $blue;
+            padding-left: 62px;
+
+            span {
+                right: auto;
+                left: 33px;
+
+                &::before {
+                    content: font-char($arrow-left);
+                }
+            }
         }
     }
 }

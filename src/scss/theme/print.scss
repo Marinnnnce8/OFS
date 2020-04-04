@@ -1,12 +1,161 @@
 @media print {
+
 	.header,
 	.footer,
+	.banner,
+	.nb-block-gallery,
+	.nb-block-share,
+	.vessels-box .uk-card-media-top,
+	.latest-news::after,
+	.news-latest,
 	.nb-block-form,
 	.TextformatterVideoEmbed,
+	.nb-block-slideshow,
+	.uk-accordion,
+	blockquote::before,
+	.news-box img,
+	.client-banner,
+	.uk-alert,
+	.uk-position-cover,
 	.uk-button,
 	.uk-breadcrumb,
 	.uk-pagination,
 	.uk-modal {
 		display: none !important;
+	}
+
+	.uk-card,
+	.services-box,
+	.vessels-box {
+		width: 100% !important;
+
+		* {
+			width: 100% !important;
+		}
+	}
+
+	h2 {
+		font-size: 30px !important;
+	}
+
+	h3 {
+		font-size: 26px !important;
+	}
+
+	.vessels-box {
+		.uk-card {
+			min-height: 400px;
+		}
+
+		.card-bottom-text {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	.news-box {
+		padding-right: 0;
+		width: 100%;
+
+		ul {
+			padding: 0;
+		}
+	}
+
+	.about-section,
+	.services-section,
+	.services-section .uk-card-body,
+	.clients-section,
+	.client-box,
+	.vessels-section,
+	.latest-news {
+		padding: 0;
+		margin: 0;
+
+		.uk-grid,
+		.uk-flex {
+			display: block !important;
+		}
+	}
+
+	.services-section {
+		.uk-card {
+			min-height: auto;
+		}
+
+		.uk-card-body,
+		.services-text {
+			position: relative;
+		}
+
+		.uk-card-body {
+			transform: none;
+			min-height: auto;
+		}
+
+		.services-text {
+			opacity: 1;
+			transform: none;
+			left: auto;
+
+			p {
+				top: auto;
+			}
+		}
+	}
+
+	.clients-section {
+		h2 {
+			max-width: 100%;
+			top: auto;
+		}
+
+		.client-box,
+		.client-text {
+			padding: 0;
+		}
+
+		.client-box {
+			display: block;
+		}
+
+		.client-text {
+			position: relative !important;
+			bottom: auto;
+			left: auto;
+			max-width: 100%;
+
+			img {
+				display: none;
+			}
+		}
+	}
+
+	.vessels-section {
+		.uk-card {
+			min-height: auto !important;
+		}
+
+		.card-bottom-text,
+		.uk-card-body {
+			position: relative !important;
+			width: 100%;
+			min-height: auto !important;
+		}
+
+		.card-bottom-text {
+			transform: none;
+		}
+
+		.uk-card-body {
+			position: relative;
+			margin-top: auto;
+			bottom: auto;
+			padding: 0;
+		}
+	}
+
+	.about-section * {
+		width: 100% !important;
 	}
 }

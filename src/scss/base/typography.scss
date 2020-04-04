@@ -25,6 +25,7 @@ h1 {
 	text-transform: uppercase;
 	color: $white;
 	margin-bottom: 0;
+
 	@media (max-width: $breakpointMedium) {
 		font-size: 46px;
 	}
@@ -90,32 +91,44 @@ p {
 
 blockquote {
 	margin-left: 8px;
-	border-left: 6px solid $blue;
 	position: relative;
-	padding: 13px 25px 13px 50px;
+	padding: 2px 25px 11px 50px;
 	font-style: normal;
 
-	&::before,
-	&::after {
+	.lines::before,
+	.lines::after,
+	&::before {
 		position: absolute;
 		left: -6px;
-		top: 50%;
 	}
+
+	.lines {
+
+		&::before,
+		&::after {
+			content: '';
+			width: 6px;
+			height: 41%;
+			background-color: $blue;
+			z-index: 0;
+			border-radius: 3px;
+		}
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+	}
+
 
 	&::before {
 		color: $green;
 		font-size: 22px;
 		transform: translate(-35%, -50%);
 		z-index: 1;
-	}
-
-	&::after {
-		background-color: $white;
-		content: '';
-		width: 6px;
-		height: 25px;
-		z-index: 0;
-		transform: translateY(-50%);
+		top: 50%;
 	}
 
 	p,
@@ -126,14 +139,22 @@ blockquote {
 	p {
 		font-size: 26px;
 		margin-bottom: 20px;
+		margin-top: 0;
 
 		&:last-of-type {
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 		}
 	}
 
 	span {
 		font-size: 18px;
+	}
+	
+	@media (max-width: $breakpointSmall) {
+		padding: 2px 25px 11px 30px;
+		p {
+			font-size: 22px;
+		}
 	}
 }
 

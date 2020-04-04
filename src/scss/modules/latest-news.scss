@@ -35,6 +35,9 @@
         margin: 0;
 
         li {
+            >a {
+                z-index: 1;
+            }
 
             &:not(:last-of-type) {
                 margin-bottom: 50px;
@@ -44,6 +47,14 @@
                 width: 150px;
                 height: auto;
                 border-radius: 10px;
+            }
+
+            @include hover {
+
+                h3,
+                .uk-button-text {
+                    color: $blue-dark;
+                }
             }
         }
     }
@@ -64,20 +75,27 @@
     @media (max-width: $breakpointSmallMax) {
         ul {
             padding: 120px 20px 15px;
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        .uk-flex {
+            flex-direction: column;
+        }
+
+        ul {
 
             li {
                 margin-bottom: 40px;
+
                 &:not(:last-of-type) {
                     margin-bottom: 40px;
                 }
+
                 img {
                     width: 100%;
                 }
             }
-        }
-
-        .uk-flex {
-            flex-direction: column;
         }
     }
 }
@@ -90,6 +108,7 @@
     max-width: 33.33%;
     height: 415px;
     padding: 60px 50px 50px;
+    z-index: 1;
 
     h2 {
         color: $white;
@@ -161,6 +180,7 @@
     h3 {
         font-size: 20px;
         margin: 5px 0 10px;
+        transition: $nbSec ease-in-out;
     }
 
     span,
@@ -187,7 +207,8 @@
         font-size: 14px;
         padding: 0 25px 0 0;
     }
-    @media (max-width: $breakpointSmallMax) {
+
+    @media (max-width: $breakpointSmall) {
         padding-left: 0;
         padding-top: 10px;
     }

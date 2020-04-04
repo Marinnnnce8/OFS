@@ -42,6 +42,21 @@
         h2 {
             font-size: 26px;
         }
+        .uk-container {
+            padding: 0 20px;
+        }
+
+        >.uk-container>.uk-flex {
+            .uk-width-1-2\@m {
+                &:first-of-type {
+                    padding-right: 0;
+                }
+    
+                &:last-of-type {
+                    padding-right: 0;
+                }
+            }
+        }
 
         p {
             font-size: 16px;

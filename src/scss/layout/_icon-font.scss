@@ -27,68 +27,71 @@
 @function font-char($filename) {
 	$char: "";
 
-	@if $filename == arrow-right {
+	@if $filename == arrow-left {
 		$char: '\E001';
 	}
-	@if $filename == calendar {
+	@if $filename == arrow-right {
 		$char: '\E002';
 	}
-	@if $filename == caret-right {
+	@if $filename == calendar {
 		$char: '\E003';
 	}
-	@if $filename == chevron-arrow-down {
+	@if $filename == caret-right {
 		$char: '\E004';
 	}
-	@if $filename == chevron-left {
+	@if $filename == chevron-arrow-down {
 		$char: '\E005';
 	}
-	@if $filename == chevron-right {
+	@if $filename == chevron-left {
 		$char: '\E006';
 	}
-	@if $filename == crew {
+	@if $filename == chevron-right {
 		$char: '\E007';
 	}
-	@if $filename == download {
+	@if $filename == crew {
 		$char: '\E008';
 	}
-	@if $filename == envelope {
+	@if $filename == download {
 		$char: '\E009';
 	}
-	@if $filename == external-link {
+	@if $filename == envelope {
 		$char: '\E00A';
 	}
-	@if $filename == instagram-logo {
+	@if $filename == external-link {
 		$char: '\E00B';
 	}
-	@if $filename == live-streaming {
+	@if $filename == instagram-logo {
 		$char: '\E00C';
 	}
-	@if $filename == minus {
+	@if $filename == live-streaming {
 		$char: '\E00D';
 	}
-	@if $filename == play-button-arrowhead {
+	@if $filename == minus {
 		$char: '\E00E';
 	}
-	@if $filename == plus {
+	@if $filename == play-button-arrowhead {
 		$char: '\E00F';
 	}
-	@if $filename == quote {
+	@if $filename == plus {
 		$char: '\E010';
 	}
-	@if $filename == right-arrow {
+	@if $filename == quote {
 		$char: '\E011';
 	}
-	@if $filename == rounded-corner-white-1 {
+	@if $filename == right-arrow {
 		$char: '\E012';
 	}
-	@if $filename == rounded-corner-white {
+	@if $filename == rounded-corner-white-1 {
 		$char: '\E013';
 	}
-	@if $filename == ship {
+	@if $filename == rounded-corner-white {
 		$char: '\E014';
 	}
-	@if $filename == time {
+	@if $filename == ship {
 		$char: '\E015';
+	}
+	@if $filename == time {
+		$char: '\E016';
 	}
 
 	@return $char;
@@ -109,6 +112,9 @@
 	display: inline-block;
 }
 
+.font-arrow-left {
+	@include font(arrow-left);
+}
 .font-arrow-right {
 	@include font(arrow-right);
 }

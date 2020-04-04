@@ -19,11 +19,7 @@
 @import 'layout/forms.scss';
 
 // UIkit
-@import "uikit/base.scss";
-@import "uikit/navbar.scss";
-@import "uikit/logo.scss";
 @import "uikit/breadcrumb.scss";
-@import "uikit/form.scss";
 
 // NB
 @import "nb/block.scss";
@@ -68,6 +64,11 @@ a:hover {
 	img {
 		width: 228px;
 	}
+}
+
+
+.uk-text-meta {
+	color: $nbBlack;
 }
 
 // uikit/breadcrumb

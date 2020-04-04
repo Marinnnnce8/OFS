@@ -13,7 +13,7 @@
 .footer-top {
     border-radius: 25px;
     min-height: 510px;
-    padding: 160px 0 165px;
+    padding: 150px 0 140px;
 
     h2,
     h3,
@@ -40,7 +40,6 @@
         }
     }
 }
-
 
 .footer-enquire {
     max-width: 830px;
@@ -101,11 +100,12 @@
 
         h2 {
             font-size: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .uk-button {
             max-width: 240px;
+            padding: 6px 50px 9px 45px;
             width: 100%;
         }
 
@@ -172,6 +172,10 @@
         span,
         a {
             font-size: 16px;
+        }
+
+        >span {
+            line-height: 1.8;
         }
 
         ul {
