@@ -209,9 +209,9 @@ input[type='submit'] {
 	display: inline-block;
 	bottom: 0;
 	transform: translateY(50%);
-	z-index: 0;
 	width: 125px;
 	height: 125px;
+	z-index: 1;
 
 	&::after,
 	a,

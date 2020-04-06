@@ -13,9 +13,12 @@ screen and (-ms-high-contrast: none) {
         overflow: hidden;
     }
 
-    .nb-block-slideshow img {
-        width: 100%;
-        max-width: 100%;
+    .uk-slideshow-items img {
+        width: auto;
+        max-width: none;
+    }
+    .uk-breadcrumb a::after {
+        transition: $nbSec ease-in-out;
     }
 }
 
@@ -23,5 +26,10 @@ screen and (-ms-high-contrast: none) {
     .footer {
         max-width: 100%;
         overflow: hidden;
+    }
+    
+    .uk-slideshow-items img {
+        width: auto;
+        max-width: none;
     }
 }
