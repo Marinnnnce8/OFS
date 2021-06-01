@@ -352,6 +352,9 @@
 			li {
 				border-radius: 20px;
 				overflow: hidden;
+				a {
+					width: 100%;
+				}
 			}
 		}
 
@@ -956,6 +959,7 @@
 		li {
 			border-bottom: 2px solid $blue-sky;
 			padding: 3px 0px;
+			align-items: center;
 		}
 
 		span {
